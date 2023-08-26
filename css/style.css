@@ -8700,6 +8700,26 @@ body.full-width {
   max-width: 100%;
 }
 
+.call-to-action {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  background-image: url(/images/img_new/bande.png);
+  background-size: cover;
+}
+
+.h2-cta h2 {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 /***************************************************************************************************************
 *****************                  It's highly recomended to you              **********************************
 *****************             don't update any code of style.css file         **********************************
