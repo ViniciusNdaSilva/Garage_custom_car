@@ -8844,3 +8844,7 @@ body {
   height: 50px;
   margin: 0 40px;
 }
+
+.content > p > .email-link {
+  text-decoration: none;
+}
