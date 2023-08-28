@@ -1746,7 +1746,7 @@
           <h1>Conheça nossa equipe</h1>
           <span class="decor"></span>
         </div>
-        <div class="row">
+        <div class="row container-especialist">
           <!--Start single item-->
           <div class="col-lg-3 size-card col-md-6 col-sm-6">
             <div class="single-item">
@@ -1834,49 +1834,19 @@
 
     <!--End free appoinment area-->
     <!--Start Brand area-->
-    <section class="brand-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="brand">
-              <!--Start single item-->
-              <div class="single-item">
-                <img src="images/bravox-logo.png" alt="Awesome Brand Image" />
-              </div>
-              <!--End single item-->
-              <!--Start single item-->
-              <div class="single-item">
-                <img src="images/h-tech-logo.png" alt="Awesome Brand Image" />
-              </div>
-              <!--End single item-->
-              <!--Start single item-->
-              <div class="single-item">
-                <img
-                  src="images/Logo-Flash-Cover.png"
-                  alt="Awesome Brand Image"
-                />
-              </div>
-              <!--End single item-->
-              <!--Start single item-->
-              <div class="single-item">
-                <img src="images/JBL-Logo.png" alt="Awesome Brand Image" />
-              </div>
-              <!--End single item-->
-              <!--Start single item-->
-              <div class="single-item">
-                <img src="images/Pioneer_logo.png" alt="Awesome Brand Image" />
-              </div>
-              <!--End single item-->
-              <!--Start single item-->
-              <div class="single-item">
-                <img src="images/taramp-logo.png" alt="Awesome Brand Image" />
-              </div>
-              <!--End single item-->
-            </div>
-          </div>
+    <section class="nav-brand">
+      <div class="logos">
+        <div class="logos-slide">
+          <img src="images/brand-img/bravox-logo.png" />
+          <img src="images/brand-img/h-tech-logo.png" />
+          <img src="images/brand-img/JBL-Logo.png" />
+          <img src="images/brand-img/Logo-Flash-Cover.png" />
+          <img src="images/brand-img/Pioneer_logo.png" />
+          <img src="images/brand-img/taramp-logo.png" />
         </div>
       </div>
     </section>
+
     <!--End Brand area-->
 
     <section>
@@ -2373,6 +2343,24 @@
           });
         });
       });
+    </script>
+    <script>
+      const carrossel = document.querySelector(".carrossel");
+      const slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+      const intervalDuration = 3000; // Mudança a cada 3 segundos
+
+      function moverCarrosselDireita() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        const position = -currentIndex * 100;
+        carrossel.style.transform = `translateX(${position}%)`;
+      }
+
+      function iniciarAutomacao() {
+        setInterval(moverCarrosselDireita, intervalDuration);
+      }
+
+      iniciarAutomacao();
     </script>
   </body>
 </html>
