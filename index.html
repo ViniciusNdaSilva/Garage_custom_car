@@ -66,18 +66,18 @@
 
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="index.html">Início <span class="decor"></span></a>
+                <a href="#home">Início <span class="decor"></span></a>
               </li>
               <li>
-                <a href="index.html">Sobre nós <span class="decor"></span></a>
+                <a href="#sobrenos">Sobre nós <span class="decor"></span></a>
               </li>
               <li>
-                <a href="index.html"
+                <a href="#services"
                   >Nossos Serviços <span class="decor"></span
                 ></a>
               </li>
               <li>
-                <a href="index.html">Contato <span class="decor"></span></a>
+                <a href="#contact">Contato <span class="decor"></span></a>
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@
     </header>
 
     <!--End header area-->
-    <section class="rev_slider_wrapper">
+    <section class="rev_slider_wrapper" id="home">
       <div class="rev_slider slider1" data-version="5.0">
         <ul>
           <!--Interior do carro ok -->
@@ -417,7 +417,7 @@
     </section>
 
     <!--Sobre nós-->
-    <section class="quality-service-area">
+    <section class="quality-service-area" id="sobrenos">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -614,7 +614,7 @@
     </section>
     <!--End trusted service area-->
     <!--Start best service area-->
-    <section class="best-service-area">
+    <section class="best-service-area" id="services">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -1912,7 +1912,7 @@
       </div>
     </section>
     <!--Start footer bottom area-->
-    <footer class="footer-area">
+    <footer class="footer-area" id="contact">
       <div class="footer-top">
         <div class="container">
           <div class="row">
@@ -2357,5 +2357,22 @@
     <script src="js/gEuwCPrBeu61.js"></script>
     <script src="js/V3WeDqVwTuUN.js"></script>
     <script src="js/uIhvZhK97sGl.js"></script>
+    <script>
+      // Smooth scrolling for menu links
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetSection = document.querySelector(
+            this.getAttribute("href")
+          );
+          const topOffset = 90; // Espaço superior fixo para o menu
+
+          window.scrollTo({
+            top: targetSection.offsetTop - topOffset,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
